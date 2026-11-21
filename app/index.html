@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div>
+    <p class="kicker">GTA VI &middot; PlayStation 5 &middot; 55 trophies &middot; every step cited</p>
+    <h1>Leonida Ledger</h1>
+    <p class="sub">The complete trophy guide and tracker for Grand Theft Auto VI. Tick trophies off as you earn them — progress saves in this browser, exports to a file, and imports back.</p>
+  </div>
+  <div class="progress-card">
+    <p class="big"><span id="earnedCount">0</span> / 55 earned</p>
+    <div class="bar"><div id="progressFill"></div></div>
+    <p class="fine" id="gradeLine">Platinum 1 &middot; Gold 2 &middot; Silver 6 &middot; Bronze 46 &middot; PSN-hidden 28</p>
+    <p class="fine">Spoiler shield <button id="spoilerToggle" type="button" aria-pressed="false">OFF — story names shown</button></p>
+    <p class="fine"><button id="exportBtn" type="button">Export progress</button> <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json"></label></p>
+    <p class="fine" id="savedNote">Saved in this browser</p>
+  </div>
+</header>
+
+<section class="audit" id="auditBar" aria-label="Audit">
+  <span><b id="auditList">55/55</b> official list</span>
+  <span><b id="auditCited">55/55</b> guides cited</span>
+  <span><b id="auditSites">7</b> source sites</span>
+  <span><b id="auditDisputes">7</b> disputes shown</span>
+  <span><b>~200 h</b> to platinum</span>
+  <span><b>1</b> playthrough + chapter replay</span>
+</section>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" data-tab="tracker" class="active">Tracker</button>
+  <button type="button" data-tab="roadmap">Roadmap</button>
+  <button type="button" data-tab="missables">Missables</button>
+  <button type="button" data-tab="sources">Sources</button>
+</nav>
+
+<main>
+  <section id="tab-tracker" class="tab-panel active">
+    <div class="controls">
+      <label>Search <input id="searchBox" type="search" placeholder="Trophy name or mission…"></label>
+      <div class="filters" id="filters">
+        <button type="button" data-filter="all" class="active">All 55</button>
+        <button type="button" data-filter="story">Story 12</button>
+        <button type="button" data-filter="missable">Missable &amp; at risk</button>
+        <button type="button" data-filter="collectibles">Collectibles 6</button>
+        <button type="button" data-filter="activities">Activities 9</button>
+        <button type="button" data-filter="online">Online 0</button>
+        <button type="button" data-filter="notearned">Not earned</button>
+      </div>
+    </div>
+    <div class="tracker-grid">
+      <div>
+        <p class="fine" id="filterNote"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </div>
+      <aside class="detail" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="tab-roadmap" class="tab-panel">
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">Nine stages in play order, built from the official descriptions. Roughly <b>200 hours</b>, difficulty <b>4/10</b>, <b>one playthrough</b> plus chapter replay for anything missed. Do the missables before their last chances pass — everything else can be cleaned up after the story.</p>
+    <ol class="stages" id="roadmapStages"></ol>
+  </section>
+
+  <section id="tab-missables" class="tab-panel">
+    <h2>Missables — last chance</h2>
+    <p class="lede">Three trophies can be missed outright, and four more are at risk if you fail them badly. Everything else is replayable in free roam or by chapter replay.</p>
+    <table class="miss-table">
+      <thead><tr><th>Flag</th><th>Trophy</th><th>Last chance</th><th>What to do</th></tr></thead>
+      <tbody id="missRows"></tbody>
+    </table>
+  </section>
+
+  <section id="tab-sources" class="tab-panel">
+    <h2>Sources and audit</h2>
+    <p class="lede">Every guide in this entry is written in our own words and names the guides it drew on. The official trophy names and descriptions are shown as PlayStation publishes them. No Rockstar logo or official artwork is used anywhere in this guide.</p>
+    <h3>Source sites</h3>
+    <ul class="source-list" id="sourceList"></ul>
+    <h3>Where sources differ</h3>
+    <ul class="dispute-list" id="disputeList"></ul>
+    <p class="fine">Audit: <span id="auditText"></span></p>
+  </section>
+</main>
+
+<footer><p>Leonida Ledger — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide is not affiliated with or endorsed by Rockstar Games. Trophy names and descriptions are quoted as published by PlayStation.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
